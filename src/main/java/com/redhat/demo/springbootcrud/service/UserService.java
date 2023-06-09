@@ -42,7 +42,7 @@ public class UserService {
     // }
     public ArrayList<User> findAll() {
         RestTemplate restTemplate = new RestTemplate();
-        String usersResponse = restTemplate.getForObject(getAllAPIURL,String.class);
+        String usersResponse = restTemplate.getForObject(getAllAPIURL+"/api/users",String.class);
         System.out.println("Recieved response from backend service : " + usersResponse);
         //Users users = null;
         User[] userList = null;
